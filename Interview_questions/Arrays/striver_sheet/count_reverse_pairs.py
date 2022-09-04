@@ -18,6 +18,7 @@ class Solution:
             self.merge_sort(right_array)
 
             i,j= 0,0
+            
             while i < len(left_array) and j < len(right_array):
                 if left_array[i] > 2 * right_array[j]:
                     self.count += len(left_array) - i

@@ -39,7 +39,7 @@ class LinkedList:
 
 class TwoPointerListNode:
 
-    def __init__(self, val, next, bottom):
+    def __init__(self, val, next=None, bottom=None):
         self.val = val
         self.next = next
         self.bottom = bottom
