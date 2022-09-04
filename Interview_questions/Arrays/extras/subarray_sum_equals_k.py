@@ -1,6 +1,3 @@
-from re import sub
-
-
 def subarray_sum_equals_k(nums, k):
     sub_arrays = []
     numbers = {0:[1, 0]}
