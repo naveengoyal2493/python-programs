@@ -22,9 +22,8 @@ def detect_cycle_in_linked_list(head):
     return
 
 
-# ll1 = LinkedList.insert_values([1,2,3,4,5])
-# ll1.next.next.next.next = ll1.next
-# ll2 = LinkedList.insert_values([1,2,3,4,5])
-# new_list = detect_cycle_in_linked_list(ll2)
-# print(new_list)
-
+ll1 = LinkedList.insert_values([1,2,3,4,5])
+ll1.next.next.next.next = ll1.next
+ll2 = LinkedList.insert_values([1,2,3,4,5])
+new_list = detect_cycle_in_linked_list(ll2)
+print(new_list.val)
