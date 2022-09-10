@@ -9,7 +9,7 @@ def rotate_linked_list(head, k):
     while tail and tail.next:
         tail = tail.next
         length += 1
-
+    
     k = k % length 
     if k == 0:
         return head
@@ -21,10 +21,10 @@ def rotate_linked_list(head, k):
     new_head = curr.next
     curr.next = None
     tail.next = head
-
+    
     return new_head
 
-ll = LinkedList().insert_values([1,2,3])
+ll = LinkedList().insert_values([1,2,3,4,5,6,7,8])
 new_ll = rotate_linked_list(ll, 4)
 LinkedList.print_ll(new_ll)
 

@@ -19,7 +19,9 @@ first_head = ListNode(7, l6)
 
 il1 = ListNode(11, None)
 il2 = ListNode(12, il1)
-second_head = ListNode(13, il2)
+il3 = ListNode(13, il2)
+il4 = ListNode(14, il3)
+second_head = ListNode(15, il4)
 
 il4 = LinkedList.merge_two_linked_lists(second_head, l4)
 ll = find_intersection_point_of_y_linked_list(first_head, second_head)

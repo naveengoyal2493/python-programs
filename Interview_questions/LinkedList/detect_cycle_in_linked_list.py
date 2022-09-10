@@ -11,7 +11,7 @@ def detect_cycle_in_linked_list(ll1):
             break
 
     slow2 = ll1
-    while slow and slow.next:
+    while slow:
         slow = slow.next
         slow2 = slow2.next
 
@@ -23,8 +23,8 @@ def detect_cycle_in_linked_list(ll1):
 
 ll1 = LinkedList.insert_values([1,2,3,4,5])
 ll1.next.next.next.next = ll1.next
-ll2 = LinkedList.insert_values([1,2,3,4,5])
-new_list = detect_cycle_in_linked_list(ll2)
+# ll2 = LinkedList.insert_values([1,2,3,4,5])
+new_list = detect_cycle_in_linked_list(ll1)
 print(new_list)
 
 # new_ll = LinkedList(new_list)
