@@ -7,7 +7,7 @@ def trapping_rainwater(nums):
     res = 0
 
     while left < right:
-        if nums[left] < nums[right]:
+        if max_left < max_right:
             left += 1
             max_left = max(max_left, nums[left])
             res += max_left - nums[left]
@@ -18,5 +18,6 @@ def trapping_rainwater(nums):
 
     return res
 
-
+heights = [0,1,0,2,1,0,1,3,2,1,2,1]
+print(trapping_rainwater(heights))
     
