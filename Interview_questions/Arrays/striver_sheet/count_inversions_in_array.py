@@ -50,4 +50,4 @@ class Solution:
 
         return nums
 
-print(Solution().count_inversions([5,4,3,2]))
+# print(Solution().count_inversions([5,4,3,2]))

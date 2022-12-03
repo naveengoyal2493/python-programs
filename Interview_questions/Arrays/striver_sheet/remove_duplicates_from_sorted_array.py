@@ -5,7 +5,7 @@ def remove_duplicates(nums):
             nums[left] = nums[right]
             left += 1
         right += 1
-    return left
+    return nums
 
-# nums = [1,1,1,1,2,2,2,2,3,3,3,3,3,4,4,4,4,4]
-# print(remove_duplicates(nums))
+nums = [1,2,1,1,3,4,2,3]
+print(remove_duplicates(nums))

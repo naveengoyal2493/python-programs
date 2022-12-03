@@ -1,3 +1,8 @@
+
+
+from tabnanny import check
+
+
 def merge_sort(nums):
     mid = len(nums) // 2
     if len(nums) > 1:
@@ -31,3 +36,17 @@ def merge_sort(nums):
 
 print(merge_sort([4,2,5,7,8,1,2,4,5,6]))
 
+
+
+def check_pallindrome(string, left, right):
+    if left >= right:
+        return True
+    if string[left] != string[right]:
+        return False
+    else:
+        left += 1
+        right -= 1
+        check_pallindrome(string, left, right)
+
+
+print(check_pallindrome("ala", 0 , 2))

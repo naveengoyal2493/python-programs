@@ -20,6 +20,7 @@ def find_repeating_and_missing_numbers_with_On_space(nums):
 # Space Complexity O(1)
 def find_repeating_and_missing_numbers_with_O1_space(nums): 
     # code here
+    repeating = None
     for i in range(len(nums)):
         x = abs(nums[i]) - 1
         if nums[x] < 0:
@@ -35,6 +36,6 @@ def find_repeating_and_missing_numbers_with_O1_space(nums):
     return (repeating, missing)
         
 
-print(find_repeating_and_missing_numbers_with_O1_space([1,1,5,4,3]))
+print(find_repeating_and_missing_numbers_with_O1_space([1,2,3,4,5,7]))
     
 
