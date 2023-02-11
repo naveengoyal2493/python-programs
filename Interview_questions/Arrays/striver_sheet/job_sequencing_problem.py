@@ -40,19 +40,20 @@ class Job:
 
 def job_sequencing_problem(Jobs: list[Job], n):
     Jobs.sort(key = lambda x: x.profit, reverse=True)
-    done = [0] * n
-    day = 0
-    profit = 0
-    for i in range(n):
-        index_range = min(Jobs[i].deadline-1, n)
-        for j in range(index_range, -1, -1):
-            if done[j] == 0:
-                day += 1
-                profit += Jobs[i].profit
-                done[j] = 1
+
+    arr = [0] * n
+    job_count = 0
+    max_profit = 0
+    for job in Jobs:
+        index = min(job.deadline - 1, n)
+        for j in range(index, -1, -1):
+            if arr[j] == 0:
+                max_profit += job.profit
+                arr[j] = 1
+                job_count += 1
                 break
     
-    return day, profit
+    return job_count, max_profit
 
 
 jobs = [(1,4,20),(2,1,10),(3,1,40),(4,1,30)]
@@ -62,4 +63,3 @@ for job in jobs:
     job_objects.append(Job(job[0], job[1], job[2]))
 
 print(job_sequencing_problem(job_objects, n))
-
