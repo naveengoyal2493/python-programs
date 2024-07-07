@@ -22,9 +22,9 @@ class Solution:
             while i < len(left_array) and j < len(right_array):
                 if left_array[i] > 2 * right_array[j]:
                     self.count += len(left_array) - i
-                    i += 1
-                else:
                     j += 1
+                else:
+                    i += 1
 
             i,j,k = 0,0,0
             while i < len(left_array) and j < len(right_array):
