@@ -36,6 +36,6 @@ def find_repeating_and_missing_numbers_with_O1_space(nums):
     return (repeating, missing)
         
 
-print(find_repeating_and_missing_numbers_with_O1_space([1,2,3,4,5,7]))
+print(find_repeating_and_missing_numbers_with_O1_space([1,2,3,4,5,5,7]))
     
 
